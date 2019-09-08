@@ -1,6 +1,6 @@
 ## ProxyBlock
 
-ProxyBlock is a simple add-in for network proxies to keep a sliding-window count of hits and deny in the case of the limit being exceeded.
+ProxyBlock is a simple add-in for network proxies to keep a sliding-window count of hits and recommend a deny via a simple `ShouldBlock()` method in the case of the limit being exceeded.
 
 ###  Sliding Window
 
