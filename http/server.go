@@ -5,10 +5,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"sync"
-	"time"
-	"github.com/tcotav/proxyblock" pb
+
 	"github.com/elazarl/goproxy"
+	pb "github.com/tcotav/proxyblock"
 )
 
 func main() {
@@ -29,13 +28,6 @@ func main() {
 	log.Fatal(http.ListenAndServe(*addr, proxy))
 }
 
-type CountServer struct {
-	ListenPort  string
-	MaxMinCount int
-}
-
 func formatLog(req *http.Request) string {
 	return fmt.Sprintf("%s %s %s", req.RequestURI, req.RemoteAddr, req.Proto)
 }
-
-
